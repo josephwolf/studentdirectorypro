@@ -1,79 +1,79 @@
-#
-#students = [
-# {:name => "Steve Musgrave", :cohort => "March", :gender => "male"},
-# {:name => "Sroop Sunar", :cohort => "March", :gender => "female"},
-# {:name => "Colin Marshall", :cohort => "March", :gender => "male"},
-# {:name => "Josh Fail-Brown", :cohort => "March", :gender => "male"},
-# {:name => "Louise Lai", :cohort => "March", :gender => "female"},
-# {:name => "Robin Doble", :cohort => "March", :gender => "male"},
-# {:name => "Alex Wong", :cohort => "March", :gender => "male"},
-# {:name => "Scott Dimmock", :cohort => "March", :gender => "male"},
-# {:name => "Muhanad Al-Rubaiee", :cohort => "March", :gender => "male"},
-# {:name => "Shelley Hope", :cohort => "March", :gender => "female"},
-# {:name => "Will Hall", :cohort => "March", :gender => "male"},
-# {:name => "Oliver Delevingne", :cohort => "March", :gender => "male"},
-# {:name => "Nico Saueressig", :cohort => "March", :gender => "male"},
-# {:name => "Apostolis", :cohort => "March", :gender => "male"},
-# {:name => "Stefania", :cohort => "March", :gender => "female"},
-# {:name => "Robert Leon", :cohort => "March", :gender => "male"},
-# {:name => "Emma Williams", :cohort => "March", :gender => "female"},
-# {:name => "Joey Wolf", :cohort => "March", :gender => "male"},
-# {:name => "Julie Walker", :cohort => "March", :gender => "female"},
-# {:name => "Daniel Le Dosquet", :cohort => "March", :gender => "male"},
-# {:name => "Mario Gintili", :cohort => "February", :gender => "male"},
-# {:name => "Mikhail Dubov", :cohort => "February", :gender => "male"},
-# {:name => "Karolis Noreika", :cohort => "February", :gender => "male"},
-# {:name => "Michael Sidon", :cohort => "February", :gender => "male"},
-# {:name => "Charles De Barros", :cohort => "February", :gender => "male"},
-# {:name => "Ruslan Vikhor", :cohort => "February", :gender => "male"},
-# {:name => "Toby Retallick", :cohort => "February", :gender => "male"},
-# {:name => "Mark Mekhaiel", :cohort => "February", :gender => "male"},
-# {:name => "Sarah Young", :cohort => "February", :gender => "female"},
-# {:name => "Hannah Wight", :cohort => "February", :gender => "male"},
-# {:name => "Khushkaran Singh", :cohort => "February", :gender => "male"},
-# {:name => "Rick brunstedt", :cohort => "February", :gender => "male"},
-# {:name => "Manjit Singh", :cohort => "February", :gender => "male"},
-# {:name => "Alex Gaudiosi", :cohort => "February", :gender => "male"},
-# {:name => "Ross Hepburn", :cohort => "February", :gender => "male"},
-# {:name => "Natascia Marchese", :cohort => "February", :gender => "male"},
-# {:name => "Tiffanie Chia", :cohort => "February", :gender => "male"},
-# {:name => "Matthew Thomas", :cohort => "February", :gender => "male"},
-# {:name => "Freddy McGroarty", :cohort => "February", :gender => "male"},
-# {:name => "Tyler Rollins", :cohort => "February", :gender => "male"},
-# {:name => "Richard Curteis", :cohort => "February", :gender => "male"},
-# {:name => "Anna Yanova", :cohort => "February", :gender => "male"},
-# {:name => "Mistery Man", :cohort => "February", :gender => "male"},
+
+#@students = [
+# {:name => "Steve Musgrave", :cohort => "March", :gender => "Male"},
+# {:name => "Sroop Sunar", :cohort => "March", :gender => "Female"},
+# {:name => "Colin Marshall", :cohort => "March", :gender => "Male"},
+# {:name => "Josh Fail-Brown", :cohort => "March", :gender => "Male"},
+# {:name => "Louise Lai", :cohort => "March", :gender => "Female"},
+# {:name => "Robin Doble", :cohort => "March", :gender => "Male"},
+# {:name => "Alex Wong", :cohort => "March", :gender => "Male"},
+# {:name => "Scott Dimmock", :cohort => "March", :gender => "Male"},
+# {:name => "Muhanad Al-Rubaiee", :cohort => "March", :gender => "Male"},
+# {:name => "Shelley Hope", :cohort => "March", :gender => "Female"},
+# {:name => "Will Hall", :cohort => "March", :gender => "Male"},
+# {:name => "Oliver Delevingne", :cohort => "March", :gender => "Male"},
+# {:name => "Nico Saueressig", :cohort => "March", :gender => "Male"},
+# {:name => "Apostolis", :cohort => "March", :gender => "Male"},
+# {:name => "Stefania", :cohort => "March", :gender => "Female"},
+# {:name => "Robert Leon", :cohort => "March", :gender => "Male"},
+# {:name => "Emma Williams", :cohort => "March", :gender => "Female"},
+# {:name => "Joey Wolf", :cohort => "March", :gender => "Male"},
+# {:name => "Julie Walker", :cohort => "March", :gender => "Female"},
+# {:name => "Daniel Le Dosquet", :cohort => "March", :gender => "Male"},
+# {:name => "Mario Gintili", :cohort => "February", :gender => "Male"},
+# {:name => "Mikhail Dubov", :cohort => "February", :gender => "Male"},
+# {:name => "Karolis Noreika", :cohort => "February", :gender => "Male"},
+# {:name => "Michael Sidon", :cohort => "February", :gender => "Male"},
+# {:name => "Charles De Barros", :cohort => "February", :gender => "Male"},
+# {:name => "Ruslan Vikhor", :cohort => "February", :gender => "Male"},
+# {:name => "Toby Retallick", :cohort => "February", :gender => "Male"},
+# {:name => "Mark Mekhaiel", :cohort => "February", :gender => "Male"},
+# {:name => "Sarah Young", :cohort => "February", :gender => "Female"},
+# {:name => "Hannah Wight", :cohort => "February", :gender => "Male"},
+# {:name => "Khushkaran Singh", :cohort => "February", :gender => "Male"},
+# {:name => "Rick brunstedt", :cohort => "February", :gender => "Male"},
+# {:name => "Manjit Singh", :cohort => "February", :gender => "Male"},
+# {:name => "Alex Gaudiosi", :cohort => "February", :gender => "Male"},
+# {:name => "Ross Hepburn", :cohort => "February", :gender => "Male"},
+# {:name => "Natascia Marchese", :cohort => "February", :gender => "Male"},
+# {:name => "Tiffanie Chia", :cohort => "February", :gender => "Male"},
+# {:name => "Matthew Thomas", :cohort => "February", :gender => "Male"},
+# {:name => "Freddy McGroarty", :cohort => "February", :gender => "Male"},
+# {:name => "Tyler Rollins", :cohort => "February", :gender => "Male"},
+# {:name => "Richard Curteis", :cohort => "February", :gender => "Male"},
+# {:name => "Anna Yanova", :cohort => "February", :gender => "Male"},
+# {:name => "Mistery Man", :cohort => "February", :gender => "Male"},
 #]
 
 
 
 
 def print_header
-	puts "Here's a list yo"
+	puts "Makers Adademy Students:"
 	puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 end
 
-def print(students)
-	students.each do |student|
+def print(input)
+	input.each do |student|
 		puts "Name: #{student[:name]}\t\tCohort: #{student[:cohort]}\tSex: #{student[:gender]}"
 	end
 end
 
 def print_footer(students)
-	febchecker = students.select do |student|
+	febchecker = @students.select do |student|
 		student[:cohort].include? ("February")
 	end
 
-	marchecker = students.select do |student|
+	marchecker = @students.select do |student|
 		student[:cohort].include? ("March")
 	end
 
-	girlchecker = students.select do |student|
+	girlchecker = @students.select do |student|
 		student[:gender].include? ("female")
 	end
 
 
-	boychecker = students.length - girlchecker.length
+	boychecker = @students.length - girlchecker.length
 
 	puts"The February cohort has #{febchecker.length} students."
 	puts"The March cohort has #{marchecker.length} students."
@@ -84,12 +84,12 @@ end
 
 def input_a_student
 	puts "Enter name"
-	name = gets.chomp.strip
+	name = gets.chomp.strip.capitalize
 	return nil if name.empty?
 	puts "Please enter the cohorts of the students" 
-	cohort = gets.chomp 
+	cohort = gets.chomp.capitalize
 	puts "Please enter the sex of the students"
-	sex = gets.chomp
+	sex = gets.chomp.capitalize
 	{:name => name, :cohort => cohort, :gender => sex}
 end
 
@@ -103,13 +103,42 @@ def input_students
 	while !student.nil? do
 		new_students << student
 		student = input_a_student
+		@students << new_students
 	end
-	puts "Now we have #{new_students.length} students."
+	puts "Now we have #{@students.length} students."
 	new_students
 end
 
+def interactive_menu
+		loop do
+			puts "1. input the students"
+			puts "2. show the students"
+			puts "9. exit"
+		selection = gets.chomp
+		case selection
+		when "1"
+			students = input_students
+		when "2"
+			print_header
+			print(@students)
+			print_footer(@students)
+		when "9"
+			exit
+		else
+			"I don't understand. Please try again."
+		end
+	end	
+end
 
-students = input_students()
-print_header
-print(students)
-print_footer(students)
+def save_students
+	file = file.open("students.csv", "w")
+	@students.each do |student|
+		student_data = [student[:name],student[:cohort],student[:gender]]
+		csv_line = student_data.join(",")
+		file.puts csv_line
+	end
+	file.close
+end
+
+@students = open("students.csv")
+interactive_menu
