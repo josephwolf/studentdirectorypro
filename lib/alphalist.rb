@@ -44,9 +44,6 @@
 {:name => "Mistery Man", :cohort => "February", :gender => "male"},
 ]
 
-
-
-
 def print_header
 	puts "List of students at Makers Academy"
 	puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -81,40 +78,34 @@ def print_footer(input)
 	puts"All in all, there are #{students.length} makers!"
 end
 
-# def input_a_student
-# 	puts "Enter name"
-# 	name = gets.chomp.strip
-# 	return nil if name.empty?
-# 	puts "Please enter the cohorts of the students" 
-# 	cohort = gets.chomp 
-# 	puts "Please enter the sex of the students"
-# 	sex = gets.chomp
-# 	{:name => name, :cohort => cohort, :gender => sex}
-# end
-
-def new_student
-	puts "Enter name"
-	name = gets.chomp.strip
-	return nil if name.empty?
-	puts "Enter cohort"
-	cohort = gets.chomp.strip
-	return "You must enter a cohort!" if cohort.empty?
-	puts "Enter sex"
-	gender = gets.chomp.strip
-	return "You must enter a gender!" if gender.empty?
-	student = {:name => name, :cohort => cohort, :gender => gender}
+def dont_leave(field)
+	(puts 'You need to enter a #(field)!'; field = gets.chomp.strip) until !field.empty?)
 end
 
-def input_students(input)
+def input_students
 	@students ||= []
-	while !student.nil? do
-		new_student
-		@students<<input
+	puts "Doing new students. Leave name empty when finished."
+	while true do puts "Enter name"
+		name = gets.chomp.strip
+		break if name.empty?
+		puts "Enter cohort"
+		cohort = gets.chomp.strip
+		dont_leave(cohort)
+		puts "Enter sex"
+		gender = gets.chomp.strip
+		dont_leave(gender)
+		student = {:name => name, :cohort => cohort, :gender => gender}
+		@students<<student
 	end
 	puts "There are now #{@students.length} students."	
 end
 
-input_students(new_student)
+input_students
+print_header
+print(@students)
+print_footer(@students)
+
+# vvvvvShitty old methods I was using vvvvv
 
 # def input_students
 # 	puts "Please enter the names of the students"
@@ -131,6 +122,26 @@ input_students(new_student)
 # 	new_students
 # end
 
-# print_header
-# print(@students)
-# print_footer(@students)
+# def input_a_student
+# 	puts "Enter name"
+# 	name = gets.chomp.strip
+# 	return nil if name.empty?
+# 	puts "Please enter the cohorts of the students" 
+# 	cohort = gets.chomp 
+# 	puts "Please enter the sex of the students"
+# 	sex = gets.chomp
+# 	{:name => name, :cohort => cohort, :gender => sex}
+# end
+
+# def new_student
+# 	puts "Enter name"
+# 	name = gets.chomp.strip
+# 	return nil if name.empty?
+# 	puts "Enter cohort"
+# 	cohort = gets.chomp.strip
+# 	return "You must enter a cohort!" if cohort.empty?
+# 	puts "Enter sex"
+# 	gender = gets.chomp.strip
+# 	return "You must enter a gender!" if gender.empty?
+# 	student = {:name => name, :cohort => cohort, :gender => gender}
+# end
