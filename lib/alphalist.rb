@@ -78,9 +78,7 @@ def print_footer(input)
 	puts"All in all, there are #{@students.length} makers!"
 end
 
-def dont_leave(field)
-	(puts 'You need to enter a #(field)!'; field = gets.chomp.strip) until !field.empty?
-end
+
 
 def input_students
 	@students ||= []
@@ -90,22 +88,45 @@ def input_students
 		break if name.empty?
 		puts "Enter cohort"
 		cohort = gets.chomp.strip.capitalize
-		dont_leave(cohort)
+		(puts "You need to enter a cohort!"; cohort = gets.chomp.strip.capitalize) until !cohort.empty?
 		puts "Enter sex"
 		gender = gets.chomp.strip.capitalize
-		dont_leave(gender)
+		(puts "You need to enter a gender!"; gender = gets.chomp.strip.capitalize) until !gender.empty?
 		student = {:name => name, :cohort => cohort, :gender => gender}
 		@students<<student
 	end
 	puts "There are now #{@students.length} students."	
 end
 
-input_students
-print_header
-print(@students)
-print_footer(@students)
+def interactive_menu
+	loop do
+		puts "Please select an option"
+		puts "1. Add new student(s) to the list"
+		puts "2. See list of students"
+		puts "9. Exit the program"
+		selection = gets.chomp
+		case selection
+		when "1"
+			input_students
+		when "2"
+			print_header
+			print(@students)
+			print_footer(@students)
+		when "9"
+			exit
+		else
+			puts "Please input a number!"
+		end
+	end
+end
 
-# vvvvvShitty old methods I was using vvvvv
+interactive_menu
+
+# vvvvv Shitty old methods I was using vvvvv
+
+# def dont_leave(field)
+# 	(puts "You need to enter a #{field}!"; field = gets.chomp.strip) until !field.empty?
+# end
 
 # def input_students
 # 	puts "Please enter the names of the students"
