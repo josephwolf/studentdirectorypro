@@ -50,8 +50,8 @@ def print_header
 end
 
 def print(input)
-	input.each do |student|
-		puts "Name: #{student[:name]}\t\tCohort: #{student[:cohort]}\tSex: #{student[:gender]}"
+	input.each_with_index do |student, index|
+		puts "#{index + 1}. Name: #{student[:name]}\t\tCohort: #{student[:cohort]}\tSex: #{student[:gender]}"
 	end
 end
 
@@ -123,6 +123,15 @@ end
 interactive_menu
 
 # vvvvv Shitty old methods I was using vvvvv
+
+# def dont_leave(field)
+# 	input = ''
+# 	while input.empty?
+# 		puts "You need to enter a #{field}!"
+# 		input = gets.chomps.strips.capitalize
+# 	end
+# 	return input
+# end
 
 # def dont_leave(field)
 # 	(puts "You need to enter a #{field}!"; field = gets.chomp.strip) until !field.empty?
