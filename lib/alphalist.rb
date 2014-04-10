@@ -46,6 +46,18 @@
 
 @students = []
 
+# module Kernel
+#   def puts(string)
+#     replace = {"The" => "Da"}
+#     replace.each { |original, final| string.sub!(original, final)}
+#     replace = {"Please" => "BITCH"}
+#     replace.each { |original, final| string.sub!(original, final)}
+#     replace = {"student" => "gangsta"}
+#     replace.each { |original, final| string.sub!(original, final)}
+#     print(string + "") 
+#   end
+# end
+
 def print_header
 	puts "List of students at Makers Academy"
 	puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
