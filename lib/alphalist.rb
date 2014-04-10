@@ -70,13 +70,17 @@ def print_footer(input)
 		student[:gender].include?("Female")
 	end
 
+	boychecker = input.select do |student|
+		student[:gender].include?("Male")
+	end
 
-	boychecker = @students.length - girlchecker.length
+
+	otherchecker = @students.length - (girlchecker.length + boychecker.length)
 
 	puts"The February cohort has #{febchecker.length} students."
 	puts"The March cohort has #{marchecker.length} students."
 	puts"The there are #{girlchecker.length} girls"
-	puts"The there are #{boychecker} boys!"
+	puts"The there are #{boychecker.length} boys!"
 	puts"All in all, there are #{@students.length} makers!"
 end
 
