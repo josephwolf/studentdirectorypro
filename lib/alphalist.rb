@@ -74,7 +74,6 @@ def print_footer(input)
 		student[:gender].include?("Male")
 	end
 
-
 	otherchecker = @students.length - (girlchecker.length + boychecker.length)
 
 	puts"The February cohort has #{febchecker.length} students."
@@ -84,7 +83,7 @@ def print_footer(input)
 	puts"All in all, there are #{@students.length} makers!"
 end
 
-
+Dir.chdir('..')
 
 def input_students
 	@students ||= []
@@ -152,5 +151,6 @@ def interactive_menu
 		end
 	end
 end
+
 
 interactive_menu
